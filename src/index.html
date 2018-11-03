@@ -17,6 +17,19 @@
 
     <link rel="stylesheet" href="css/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Overlock:900|Quicksand" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128602921-1"></script>
+    <script>
+        if (document.location.href.includes('adventfestival.org')) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-128602921-1');
+        }
+    </script>
+
 </head>
 
 <body>
@@ -29,7 +42,7 @@
         <div class="table">
             <div class="table__row">
                 <div class="table__row__cell table__row__cell-label">Location:</div>
-                <div class="table__row__cell">St. Stephen’s in Laurelhurst</div>
+                <div class="table__row__cell"><a href="https://ststephens-seattle.org/">St. Stephen’s in Laurelhurst</a></div>
             </div>
             <div class="table__row">
                 <div class="table__row__cell table__row__cell-label">Address:</div>
@@ -66,7 +79,7 @@
             <h3>Live reindeer</h3>
             <p>Don’t miss the chance to visit with live reindeer, take photos with Santa and enjoy
                 holiday season’s best treats and drinks.</p>
-            <h3>Free of Charge</h3>
+            <h3>Free of charge</h3>
             <p>The Advent Festival is free of charge with loads of fun for the entire family and all are
                 welcome! It’s a great opportunity to gather with friends and neighbors, spread holiday cheer and usher
                 in the Christmas spirit!</p>
@@ -77,9 +90,11 @@
         <h3><a href="mailto:info@adventfestival.org">Click here to contact us</a></h3>
     </div>
     <footer>
-        <p class="tiny-text">St. Stephen's Laurelhurst | 4805 NE 45th Street | Seattle 98105<br></p>
+        <div><a href="https://ststephens-seattle.org/"><img src="img/ststephens-rev-1.png" alt="St Stephen's Episcopal Church" /></a></div>
+        <p class="tiny-text">4805 NE 45th Street<br>Seattle 98105</p>
         <p class="copyright tiny-text">© 2018 AdventFestival.org</p>
     </footer>
+
 </body>
 
 </html>

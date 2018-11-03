@@ -96,18 +96,24 @@ header {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     box-shadow: 2px 2px 5px #ccc;
-    padding:1.3em 0;
+    padding:3rem 0;
 
     >.table {
         margin: 0 auto;
     
         .table__row__cell {
-            font-size:1.1rem;
-            line-height: 1.1rem;
+            font-size:1.3rem;
+            line-height: 1.5rem;
             padding:.3rem;
 
             &.table__row__cell-label {
                 font-weight:bolder;
+            }
+
+            a {
+                font-size: inherit;
+                line-height: inherit;
+                color: inherit;
             }
         }
     }
@@ -149,6 +155,11 @@ footer {
     p {
         padding-bottom: 0;
         margin-bottom: 0;
+    }
+
+    a {
+        color:inherit;
+        font-size: inherit;
     }
 }
 
