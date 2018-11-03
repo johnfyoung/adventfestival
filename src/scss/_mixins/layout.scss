@@ -1,0 +1,61 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-gap: .8rem;
+    margin: .8rem auto;
+    padding:.8rem;
+    width:100%;
+}
+
+.container > * {
+    grid-column: col-start / span 12;
+}
+
+img,
+iframe,
+video,
+object { 
+    max-width: 100%;  
+}
+
+@mixin grid-containers($breakpoints, $widths, $cols) {
+    @each $label, $width in $widths {
+        @media screen and (min-width: #{map-get($breakpoints, $label)}) {
+            .container {
+                width: $width;
+            }
+
+            .hide-#{$label} {
+                display: none;
+            }
+
+            .show-#{$label} {
+                display: block;
+            }
+
+            @include grid-columns($cols, $label);
+        }
+    }
+}
+
+@mixin grid-columns($cols, $size-label) {
+    @for $i from 1 through $cols {
+        .col-#{$size-label}-#{$i} {
+            grid-column: auto / span #{$i};
+        }
+
+        @if $i != 12 {
+            .offset-#{$size-label}-#{$i} {
+                grid-column-start: #{$i + 1} !important;
+            }
+        }
+    }
+}
+
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+}

@@ -1,0 +1,29 @@
+$grid-breakpoints: (
+    'xs':   0,
+    'sm':   480px,
+    'smd':  640px,
+    'md':   768px,
+    'mdlg': 960px,
+    'lg':   1024px,
+    'xl':   1170px,
+    'xxl':  1200px
+);
+
+$grid-max-widths: (
+    'xs': 100%,
+    'sm': 480px,
+    'smd': 576px,
+    'md':   720px,
+    'mdlg': 880px,
+    'lg':   1000px,
+    'xl':   1024px,
+    'xxl':  1170px
+);
+
+$grid-count: 12;
+
+
+$min-page-size: 320px;
+$max-page-size: map-get($grid-breakpoints, 'xxl');
+$min-font-size: 14px;
+$max-font-size: 20px;
